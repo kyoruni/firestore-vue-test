@@ -1,14 +1,19 @@
 <template>
   <div id="app">
-    <div class="btn btn-info">hoge</div>
+    <header-menu/>
+    hoge
   </div>
 </template>
 
 <script>
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import HeaderMenu from '@/components/Header'
 
 export default {
   name: 'App',
+  components: {
+    HeaderMenu,
+  }
 }
 </script>
