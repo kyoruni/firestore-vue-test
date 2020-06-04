@@ -31,7 +31,7 @@ export default {
     }
   },
   mounted () {
-    firestore.collection('items').get().then(snapShot => {
+    firestore.collection('items').orderBy('id', 'asc').get().then(snapShot => {
       const array = [];
       snapShot.forEach(item => {
         array.push(item.data())
