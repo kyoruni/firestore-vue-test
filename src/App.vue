@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <header-menu/>
-    <items/>
+    <div class="container">
+      <div class="row mt-2">
+        <div class="col-8 mx-auto">
+          <items/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
