@@ -1,10 +1,23 @@
 <template>
   <div class="items">
-    <ul class="list-group">
-      <li class="list-group-item" v-for="item in items" :key="item.id">
-        {{ item.name }}
-      </li>
-    </ul>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th scope="col">名称</th>
+          <th scope="col">価格</th>
+          <th scope="col">カテゴリー</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in items" :key="item.id">
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.category_id }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -21,10 +34,10 @@ export default {
     firestore.collection('items').get().then(snapShot => {
       const array = [];
       snapShot.forEach(item => {
-        array.push(item.data());
-      });
+        array.push(item.data())
+      })
       this.items = array
-    });
+    })
   }
 }
 </script>

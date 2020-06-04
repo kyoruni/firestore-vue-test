@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <b-navbar type="dark" class="navbar">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar-brand href="#">アイテム一覧</b-navbar-brand>
     </b-navbar>
   </div>
 </template>
