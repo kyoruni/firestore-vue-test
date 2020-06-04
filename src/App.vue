@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-menu/>
-    hoge
+    <items/>
   </div>
 </template>
 
@@ -9,11 +9,13 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import HeaderMenu from '@/components/Header'
+import Items from '@/components/Items'
 
 export default {
   name: 'App',
   components: {
     HeaderMenu,
+    Items,
   }
 }
 </script>
